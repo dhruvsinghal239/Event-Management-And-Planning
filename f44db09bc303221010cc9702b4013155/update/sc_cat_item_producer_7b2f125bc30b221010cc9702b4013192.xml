@@ -7,7 +7,7 @@
         <billable>false</billable>
         <can_cancel>false</can_cancel>
         <category/>
-        <checked_out>false</checked_out>
+        <checked_out/>
         <cost>0</cost>
         <custom_cart/>
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
@@ -31,7 +31,7 @@
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>Assign  a Task</name>
+        <name>Request Venue Booking</name>
         <no_attachment_v2>false</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
@@ -55,7 +55,7 @@
 * To access the variables, use `producer.var1` where var1 is the name of the variable
 * To access the Record Producer use `cat_item`
 */]]></post_insert_script>
-        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=88bfc297c3c7221010cc9702b401318d&amp;sysparm_preview=true", "summary");</preview>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=7b2f125bc30b221010cc9702b4013192&amp;sysparm_preview=true", "summary");</preview>
         <price>0</price>
         <published_ref/>
         <recurring_frequency/>
@@ -84,49 +84,49 @@
         <short_description/>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
-        <state>published</state>
+        <state/>
         <sys_class_name>sc_cat_item_producer</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-04 12:48:49</sys_created_on>
-        <sys_id>88bfc297c3c7221010cc9702b401318d</sys_id>
-        <sys_mod_count>9</sys_mod_count>
-        <sys_name>Assign  a Task</sys_name>
+        <sys_created_on>2025-08-04 13:54:35</sys_created_on>
+        <sys_id>7b2f125bc30b221010cc9702b4013192</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Request Venue Booking</sys_name>
         <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
         <sys_policy/>
         <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
-        <sys_update_name>sc_cat_item_producer_88bfc297c3c7221010cc9702b401318d</sys_update_name>
+        <sys_update_name>sc_cat_item_producer_7b2f125bc30b221010cc9702b4013192</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2025-08-04 13:35:03</sys_updated_on>
-        <table_name>x_1790002_event_ma_event_task</table_name>
+        <sys_updated_on>2025-08-04 13:57:44</sys_updated_on>
+        <table_name>x_1790002_event_ma_venue</table_name>
         <taxonomy_topic/>
         <template/>
         <template_manager_roles/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>9</version>
+        <version>6</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>
         <workflow/>
     </sc_cat_item_producer>
-    <sys_translated_text action="delete_multiple" query="documentkey=88bfc297c3c7221010cc9702b401318d"/>
-    <fx_price action="delete_multiple" query="id=88bfc297c3c7221010cc9702b401318d"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=7b2f125bc30b221010cc9702b4013192"/>
+    <fx_price action="delete_multiple" query="id=7b2f125bc30b221010cc9702b4013192"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price</field>
-        <id>88bfc297c3c7221010cc9702b401318d</id>
+        <id>7b2f125bc30b221010cc9702b4013192</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-04 12:48:49</sys_created_on>
-        <sys_id>63305297c3c7221010cc9702b4013116</sys_id>
+        <sys_created_on>2025-08-04 13:54:35</sys_created_on>
+        <sys_id>8b4f9e1bc30b221010cc9702b401310f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-04 12:48:49</sys_updated_on>
+        <sys_updated_on>2025-08-04 13:54:35</sys_updated_on>
         <table>sc_cat_item_producer</table>
         <type>calculated</type>
     </fx_price>
