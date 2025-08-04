@@ -22,5 +22,6 @@
                 <element inactive_on_update="false" label="Planned" sequence="1" value="planned"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Location" max_length="40" name="x_location" type="string"/>
     </element>
 </database>
