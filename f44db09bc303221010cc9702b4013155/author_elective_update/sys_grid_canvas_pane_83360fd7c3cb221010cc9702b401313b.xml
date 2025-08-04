@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="DELETE">
+        <grid_canvas display_value="New Tab 1">1ef5c71bc3cb221010cc9702b4013166</grid_canvas>
+        <height>10</height>
+        <portal_widget display_value="Created 2025-08-04 09:44:43">c7360fd7c3cb221010cc9702b4013139</portal_widget>
+        <posx>0</posx>
+        <posy>0</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 16:44:43</sys_created_on>
+        <sys_id>83360fd7c3cb221010cc9702b401313b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1ef5c71bc3cb221010cc9702b4013166</sys_name>
+        <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_83360fd7c3cb221010cc9702b401313b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 16:44:43</sys_updated_on>
+        <width>12</width>
+    </sys_grid_canvas_pane>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</application>
+        <file_path/>
+        <instance_id>d973a188eb7bcad4c040fddacad0cde1</instance_id>
+        <instance_name>dev282365</instance_name>
+        <name>sys_grid_canvas_pane_83360fd7c3cb221010cc9702b401313b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane"><sys_grid_canvas_pane action="INSERT_OR_UPDATE"><grid_canvas display_value="New Tab 1">1ef5c71bc3cb221010cc9702b4013166</grid_canvas><height>10</height><portal_widget display_value="Created 2025-08-04 09:44:43">c7360fd7c3cb221010cc9702b4013139</portal_widget><posx>0</posx><posy>0</posy><sys_class_name>sys_grid_canvas_pane</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-04 16:44:43</sys_created_on><sys_id>83360fd7c3cb221010cc9702b401313b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1ef5c71bc3cb221010cc9702b4013166</sys_name><sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package><sys_policy/><sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope><sys_update_name>sys_grid_canvas_pane_83360fd7c3cb221010cc9702b401313b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-04 16:44:43</sys_updated_on><width>12</width></sys_grid_canvas_pane></record_update>]]></payload>
+        <payload_hash>386510870</payload_hash>
+        <record_name>1ef5c71bc3cb221010cc9702b4013166</record_name>
+        <reverted_from/>
+        <source>2c524153c343221010cc9702b4013192</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 16:44:43</sys_created_on>
+        <sys_id>43360fd7c3cb221010cc9702b401313d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19875f899ba0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 16:44:43</sys_updated_on>
+        <type>Grid Canvas Pane</type>
+        <update_guid>47360fd778cb221092b90954726c853c</update_guid>
+        <update_guid_history>47360fd778cb221092b90954726c853c:386510870</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 16:44:48</sys_created_on>
+        <sys_db_object display_value="" name="sys_grid_canvas_pane">sys_grid_canvas_pane</sys_db_object>
+        <sys_id>40dbbed29b244d5498bea74a4c044f10</sys_id>
+        <sys_metadata>83360fd7c3cb221010cc9702b401313b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1ef5c71bc3cb221010cc9702b4013166</sys_name>
+        <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
+        <sys_scope_delete display_value="">009a09d24ec2430580192c4a426c2c41</sys_scope_delete>
+        <sys_update_name>sys_grid_canvas_pane_83360fd7c3cb221010cc9702b401313b</sys_update_name>
+        <sys_update_version display_value="sys_grid_canvas_pane_83360fd7c3cb221010cc9702b401313b">43360fd7c3cb221010cc9702b401313d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 16:44:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
