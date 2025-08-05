@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>EventUtils</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[var utils = new EventUtils(); // set the event ID before calling
+var resultsJSON = utils.fetchEventDetails('EVT0001002');
+var results = JSON.parse(resultsJSON);
+
+if (results.length > 0) {
+    results.forEach(function(event) {
+        gs.info("Event ID: " + event.eventid);
+        gs.info("Event Name: " + event.EventName);
+        gs.info("Event Date: " + event.EventDate);
+        gs.info("Location: " + event.Location);
+        gs.info("------------------------------");
+    });
+} else {
+    gs.info("No events found for event ID: " + utils.eventid);
+}
+var is_vip = utils.isVIP('737d51d7c3c3221010cc9702b401311c');
+gs.info(is_vip);
+
+var budget = utils.getRemainingBudget('EVT0001002');
+gs.info(budget);
+
+var eventNumber = 'EVT0001002';
+var tasks = utils.fetchEventTasks(eventNumber);
+
+if (tasks.length > 0) {
+    tasks.forEach(function(task) {
+        gs.info("Task Sys ID: " + task.sys_id);
+        gs.info("Short Description: " + task.short_description);
+        gs.info("State: " + task.state);
+        gs.info("------------------------------");
+    });
+} else {
+    gs.info("No tasks found for event number: " + eventNumber);
+}
+
+var eventNumber = 'EVT0001002';  // Replace with the event number you want to search by
+var attendees = utils.fetchEventAttendees(eventNumber);
+
+if(attendees.length > 0) {
+    attendees.forEach(function(attendee) {
+        gs.info("Attendee Sys ID: " + attendee.sys_id);
+        gs.info("First Name: " + attendee.first_name);
+        gs.info("Last Name: " + attendee.last_name);
+        gs.info("Email: " + attendee.email);
+        gs.info("------------------------------");
+    });
+} else {
+    gs.info("No attendees found for event number: " + eventNumber);
+}
+
+var eventNumber = 'EVT0001002'; // Replace with the event number you want to query
+var vendors = utils.fetchEventVendors(eventNumber);
+
+if (vendors.length > 0) {
+    vendors.forEach(function(vendor) {
+        gs.info("Vendor Sys ID: " + vendor.sys_id);
+        gs.info("Vendor Name: " + vendor.name);
+        gs.info("Contact Person: " + vendor.contact);
+        gs.info("------------------------------");
+    });
+} else {
+    gs.info("No vendors found for event number: " + eventNumber);
+}
+
+var eventNumber = 'EVT0001002';  // Replace with the event number you want to query
+var budgetDetails = utils.fetchEventBudgetDetails(eventNumber);
+
+if (budgetDetails) {
+    gs.info("Budget Sys ID: " + budgetDetails.sys_id);
+    gs.info("Total Budget: " + budgetDetails.budget_amount);
+    gs.info("Amount Spent: " + budgetDetails.amount_spent);
+    gs.info("Remaining Amount: " + budgetDetails.remaining_amount);
+} else {
+    gs.info("No budget details found for event number: " + eventNumber);
+}
+
+var eventNumber = 'EVT0001002';  // Replace with the event number you want to query
+var feedbacks = utils.fetchEventFeedback(eventNumber);
+
+if (feedbacks.length > 0) {
+    feedbacks.forEach(function(feedback) {
+        gs.info("Feedback Sys ID: " + feedback.sys_id);
+        gs.info("Attendee ID: " + feedback.attendee);
+        gs.info("Rating: " + feedback.rating);
+        gs.info("------------------------------");
+    });
+} else {
+    gs.info("No feedback found for event number: " + eventNumber);
+}
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 12:18:47</sys_created_on>
+        <sys_id>3fd2d32fc30b221010cc9702b4013177</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EventUtils</sys_name>
+        <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
+        <sys_update_name>sys_script_fix_3fd2d32fc30b221010cc9702b4013177</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 12:18:47</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

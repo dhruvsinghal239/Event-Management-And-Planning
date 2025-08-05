@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>5</order>
+        <semantic_tag/>
+        <size>2</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">861aeb2bc38b221010cc9702b401310a</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 13:59:51</sys_created_on>
+        <sys_id>061aeb2bc38b221010cc9702b4013115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>5</sys_name>
+        <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
+        <sys_update_name>sp_column_061aeb2bc38b221010cc9702b4013115</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 13:59:51</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</application>
+        <file_path/>
+        <instance_id>d973a188eb7bcad4c040fddacad0cde1</instance_id>
+        <instance_name>dev282365</instance_name>
+        <name>sp_column_061aeb2bc38b221010cc9702b4013115</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>5</order><semantic_tag/><size>2</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">861aeb2bc38b221010cc9702b401310a</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-05 13:59:51</sys_created_on><sys_id>061aeb2bc38b221010cc9702b4013115</sys_id><sys_mod_count>0</sys_mod_count><sys_name>5</sys_name><sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package><sys_policy/><sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope><sys_update_name>sp_column_061aeb2bc38b221010cc9702b4013115</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-05 13:59:51</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>-313859725</payload_hash>
+        <record_name>5</record_name>
+        <reverted_from/>
+        <source>2c524153c343221010cc9702b4013192</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 13:59:51</sys_created_on>
+        <sys_id>021aeb2bc38b221010cc9702b4013117</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1987a8806d40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 13:59:51</sys_updated_on>
+        <type>Column</type>
+        <update_guid>061aeb2b948b2210066ecb9ea04b9f16</update_guid>
+        <update_guid_history>061aeb2b948b2210066ecb9ea04b9f16:-313859725</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="5">6d5a636bc38b221010cc9702b401313a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 14:00:55</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>3ec1c414038249f4a51f58a86f9ce0a9</sys_id>
+        <sys_metadata>061aeb2bc38b221010cc9702b4013115</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>5</sys_name>
+        <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
+        <sys_scope_delete display_value="">009a09d24ec2430580192c4a426c2c41</sys_scope_delete>
+        <sys_update_name>sp_column_061aeb2bc38b221010cc9702b4013115</sys_update_name>
+        <sys_update_version display_value="sp_column_061aeb2bc38b221010cc9702b4013115">021aeb2bc38b221010cc9702b4013117</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 14:00:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

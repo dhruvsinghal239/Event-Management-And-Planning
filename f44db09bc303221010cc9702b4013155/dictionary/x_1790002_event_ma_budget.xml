@@ -8,8 +8,8 @@
                 <element inactive_on_update="false" label="New" sequence="0" value="new"/>
             </choice>
         </element>
-        <element attributes="omit_sys_original=true" label="Amount Remaining" max_length="20" name="amount_remaining" read_only="true" type="currency"/>
-        <element attributes="omit_sys_original=true" label="Amount Spent" max_length="20" name="amount_spent" type="currency"/>
+        <element attributes="omit_sys_original=true" audit="true" label="Amount Remaining" max_length="20" name="amount_remaining" read_only="true" type="currency"/>
+        <element attributes="omit_sys_original=true" audit="true" label="Amount Spent" max_length="20" name="amount_spent" type="currency"/>
         <element attributes="encode_utf8=false" label="Event Id" max_length="32" name="event_id" reference="x_1790002_event_ma_event_record" type="reference"/>
     </element>
 </database>

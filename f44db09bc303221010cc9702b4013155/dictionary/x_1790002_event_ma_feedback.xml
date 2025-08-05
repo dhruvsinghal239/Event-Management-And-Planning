@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="2e11d597c383221010cc9702b4013176" extends="task" label="Feedback" max_length="40" name="x_1790002_event_ma_feedback" type="collection">
-        <element attributes="edge_encryption_enabled=true" choice="1" default="excellent" label="Rating" max_length="40" name="rating" type="string">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="excellent" label="Rating" max_length="40" name="rating" text_index="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Good" sequence="1" value="good"/>
                 <element inactive_on_update="false" label="Excellent" sequence="0" value="excellent"/>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.event-header-widget {&#13;
+  padding: 16px;&#13;
+  background: #f7fafc;&#13;
+  border-radius: 8px;&#13;
+  box-shadow: 0 1px 4px #ccc;&#13;
+  margin-bottom: 20px;&#13;
+}&#13;
+.event-header-widget h2 {&#13;
+  margin-top: 0;&#13;
+}&#13;
+.table-responsive, .table {&#13;
+  width: 100% !important;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>event_dashboard_widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Event Dashboard widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    var utils = new EventUtils();
+    var raw = utils.fetchAllEvents();
+
+    try {
+        data.events = JSON.parse(raw);
+    } catch (e) {
+        data.events = [];
+    }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 13:45:51</sys_created_on>
+        <sys_id>bef2e323c38b221010cc9702b4013153</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Event Dashboard widget</sys_name>
+        <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
+        <sys_update_name>sp_widget_bef2e323c38b221010cc9702b4013153</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 13:56:59</sys_updated_on>
+        <template><![CDATA[<div class="table-responsive" style="width:100%;">
+  <table class="table table-striped table-bordered table-hover table-condensed" style="width:100%;">
+    <thead>
+      <tr>
+        <th>Event Number</th>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Summary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="event in c.data.events">
+        <td>{{event.number}}</td>
+        <td>{{event.event_name}}</td>
+        <td>{{event.event_date}}</td>
+        <td>{{event.x_location}}</td>
+        <td>{{event.summary}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>
