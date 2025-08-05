@@ -2,7 +2,7 @@
     <sys_ui_action action="INSERT_OR_UPDATE">
         <action_name>reschedule_date</action_name>
         <active>true</active>
-        <client>false</client>
+        <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
@@ -28,18 +28,41 @@
         <list_style/>
         <messages/>
         <name>Reschedule</name>
-        <onclick/>
+        <onclick>rescheduleClient()</onclick>
         <order>100</order>
-        <script><![CDATA[(function reschedule(){
-    var newDate = new GlideDateTime();
-    newDate.addDaysLocalTime(7);
-    current.event_date = newDate;
-    current.status = 'planned';
-    current.update();
-    action.setRedirectURL(current);
-    gs.addInfoMessage("Event Scheduled to " +newDate.getDisplayValue());
-    // gs.eventQueue('x_1790170_event_ma.planner.reschedule', current, current.number, current.event_name);
-})()]]></script>
+        <script><![CDATA[function rescheduleClient() {
+    // Option 1: Prompt user to enter date, then set it in event_date field
+    var inputDate = prompt("Enter the new event date (YYYY-MM-DD):", g_form.getValue('event_date').substr(0,10));
+    if (inputDate == null || inputDate.trim() === "") {
+        alert("Date is required.");
+        return false;
+    }
+    var dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+    if (!dateRegex.test(inputDate)) {
+        alert("Please enter the date in YYYY-MM-DD format.");
+        return false;
+    }
+    // Set the user input date into event_date field (keeping time as is or resetting)
+    g_form.setValue('event_date', inputDate + " 00:00:00");
+ 
+    // Submit the form to run server-side code
+    gsftSubmit(null, g_form.getFormElement(), 'reschedule_date');
+}
+ 
+// Server-side code runs after form submit
+if (typeof window == 'undefined') {
+    (function rescheduleServer() {
+        // Use the value as it is from event_date field (already includes date and time)
+        var inputDateStr = current.event_date.getDisplayValue(); 
+        // current.event_date is GlideDateTime, no need to parse again
+ 
+        current.status = 'planned';
+        current.update();
+        action.setRedirectURL(current);
+ 
+        gs.addInfoMessage("Event rescheduled to " + inputDateStr);
+    })();
+}]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -50,7 +73,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fa49475fc3cb221010cc9702b40131c6</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Reschedule</sys_name>
         <sys_overrides/>
         <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
@@ -58,7 +81,7 @@
         <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
         <sys_update_name>sys_ui_action_fa49475fc3cb221010cc9702b40131c6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-05 04:19:09</sys_updated_on>
+        <sys_updated_on>2025-08-05 08:48:49</sys_updated_on>
         <table>x_1790002_event_ma_event_record</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

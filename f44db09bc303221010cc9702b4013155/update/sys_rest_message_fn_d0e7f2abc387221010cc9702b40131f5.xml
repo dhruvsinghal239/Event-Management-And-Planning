@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+"task_name" : "${task_name}",&#13;
+"assigned_to" : "${assigned_to}",&#13;
+"event_id" : "${event_id}"&#13;
+}&#13;
+</content>
+        <function_name>task_assign</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>task_is_assigned [ task_assign ]</qualified_name>
+        <rest_endpoint/>
+        <rest_message display_value="task_is_assigned">c977fe6bc387221010cc9702b401314a</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 10:27:49</sys_created_on>
+        <sys_id>d0e7f2abc387221010cc9702b40131f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task_assign</sys_name>
+        <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
+        <sys_update_name>sys_rest_message_fn_d0e7f2abc387221010cc9702b40131f5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 10:27:49</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>
