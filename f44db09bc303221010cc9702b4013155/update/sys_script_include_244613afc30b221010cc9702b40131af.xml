@@ -9,8 +9,24 @@
         <name>BudgetUtils</name>
         <script><![CDATA[var BudgetUtils = Class.create();
 BudgetUtils.prototype = {
-    initialize: function() {
+    initialize: function() {},
+
+    fetchAllBudgets: function() {
+        var res = [];
+        var gr = new GlideRecord('x_1790002_event_ma_budget'); // Use your actual budget table name
+        gr.query();
+        while (gr.next()) {
+            res.push({
+                number: gr.getValue('number'),
+                total_budget: gr.getValue('total_budget'),
+                amount_spent: gr.getValue('amount_spent'),
+                amount_remaining: gr.getValue('amount_remaining'),
+                status: gr.getDisplayValue('status')
+            });
+        }
+        return JSON.stringify(res);
     },
+
     TotalBudget: function(id) {
         var event = new GlideRecord('x_1790002_event_ma_budget');
         event.addQuery('number', id);
@@ -21,40 +37,40 @@ BudgetUtils.prototype = {
             event.update();
         }
     },
-	remainingBudget: function(id) {
-		var remaining = 0;
+    remainingBudget: function(id) {
+        var remaining = 0;
         var event = new GlideRecord('x_1790002_event_ma_budget');
         event.addQuery('number', id);
         event.query();
-        if(event.next()) {
+        if (event.next()) {
             remaining = event.getValue('amount_remaining');
         }
-		return remaining;
+        return remaining;
     },
-	isApproved:function(id){
-      var budget = new GlideRecord('x_1790002_event_ma_budget');
+    isApproved: function(id) {
+        var budget = new GlideRecord('x_1790002_event_ma_budget');
         budget.addQuery('number', id);
         budget.query();
         while (budget.next()) {
-			if(budget.getValue('status') == 'approved')
-			{
-				return 'Approved';
-			}
-	}
-	return false;
-	},
-	getEventBudget:function(eventid){
+            if (budget.getValue('status') == 'approved') {
+                return 'Approved';
+            }
+        }
+        return false;
+    },
+    getEventBudget: function(eventid) {
         var res = [];
         var budget = new GlideRecord('x_1790002_event_ma_budget');
-        budget.addQuery('event_id.number',eventid);
+        budget.addQuery('event_id.number', eventid);
         budget.query();
         if (budget.next()) {
             res.push({
                 id: budget.getDisplayValue(),
-				totalBudget : budget.getValue('total_budget'),
-            });}
-            return JSON.stringify(res);
-        
+                totalBudget: budget.getValue('total_budget'),
+            });
+        }
+        return JSON.stringify(res);
+
     },
 
     type: 'BudgetUtils'
@@ -63,13 +79,13 @@ BudgetUtils.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-05 12:38:59</sys_created_on>
         <sys_id>244613afc30b221010cc9702b40131af</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>BudgetUtils</sys_name>
         <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
         <sys_update_name>sys_script_include_244613afc30b221010cc9702b40131af</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-05 12:42:28</sys_updated_on>
+        <sys_updated_on>2025-08-05 14:39:07</sys_updated_on>
     </sys_script_include>
 </record_update>
