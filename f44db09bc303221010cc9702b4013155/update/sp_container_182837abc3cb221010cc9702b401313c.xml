@@ -6,23 +6,23 @@
         <bootstrap_alt>false</bootstrap_alt>
         <class_name/>
         <container_class_name/>
-        <name>EMP Homepage - Container 3</name>
-        <order>3</order>
+        <name>Attendees - Container 2</name>
+        <order>2</order>
         <semantic_tag/>
-        <sp_page display_value="emp_homepage">e7fb57e7c34b221010cc9702b4013174</sp_page>
+        <sp_page display_value="attendee_list">bc5d57e7c34b221010cc9702b401319d</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-05 13:07:21</sys_created_on>
-        <sys_id>411e1b6bc34b221010cc9702b4013191</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>EMP Homepage - Container 3</sys_name>
+        <sys_created_on>2025-08-05 15:01:11</sys_created_on>
+        <sys_id>182837abc3cb221010cc9702b401313c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Attendees - Container 2</sys_name>
         <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
         <sys_policy/>
         <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
-        <sys_update_name>sp_container_411e1b6bc34b221010cc9702b4013191</sys_update_name>
+        <sys_update_name>sp_container_182837abc3cb221010cc9702b401313c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-05 15:57:02</sys_updated_on>
+        <sys_updated_on>2025-08-05 15:01:11</sys_updated_on>
         <title/>
         <width>container</width>
     </sp_container>

@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function() {
-  /* widget controller */
+        <client_script><![CDATA[api.controller = function($scope) {
   var c = this;
-};]]></client_script>
+
+  c.loadEvents = function() {
+    c.events = angular.copy(c.data.events || []);
+  };
+
+  c.deleteEvent = function(eventNumber) {
+    if (confirm("Are you sure you want to delete event " + eventNumber + "?")) {
+      c.server.update({ action: 'deleteEvent', eventNumber: eventNumber }).then(function(response) {
+        if (response) {
+          alert("Event deleted successfully.");
+          c.refreshEvents();
+        } else {
+          alert("Failed to delete event.");
+        }
+      });
+    }
+  };
+
+  c.openRescheduleModal = function(event) {
+    var newDate = prompt("Enter new event date (YYYY-MM-DD HH:mm:ss):", event.event_date);
+    if (newDate) {
+      c.server.update({ action: 'rescheduleEvent', eventNumber: event.number, newDate: newDate }).then(function(success) {
+        if (success) {
+          alert("Event rescheduled successfully.");
+          c.refreshEvents();
+        } else {
+          alert("Failed to reschedule event.");
+        }
+      });
+    }
+  };
+
+  c.refreshEvents = function() {
+    $scope.server.get().then(function(response) {
+      c.events = angular.copy(response.data.events || []);
+    });
+  };
+
+  c.loadEvents();
+};
+]]></client_script>
         <controller_as>c</controller_as>
         <css>.event-header-widget {&#13;
   padding: 16px;&#13;
@@ -43,6 +82,42 @@
     } catch (e) {
         data.events = [];
     }
+
+    // Handle client update calls safely
+    if (typeof input !== "undefined" && input.action) {
+        if (input.action == 'deleteEvent') {
+            gs.info("Deleting event: " + input.eventNumber);
+            data.result = deleteEvent(input.eventNumber);
+        } else if (input.action == 'rescheduleEvent') {
+            gs.info("Rescheduling event: " + input.eventNumber + " to: " + input.newDate);
+            data.result = rescheduleEvent(input.eventNumber, input.newDate);
+        }
+    }
+
+    // Function to delete event by event number
+    function deleteEvent(eventNumber) {
+        var gr = new GlideRecord('x_1790002_event_ma_event_record');
+        gr.addQuery('number', eventNumber);
+        gr.query();
+        if (gr.next()) {
+            gr.deleteRecord();
+            return true;
+        }
+        return false;
+    }
+
+    // Function to reschedule event by event number and new date
+    function rescheduleEvent(eventNumber, newDate) {
+        var gr = new GlideRecord('x_1790002_event_ma_event_record');
+        gr.addQuery('number', eventNumber);
+        gr.query();
+        if (gr.next()) {
+            gr.setValue('event_date', newDate);
+            gr.update();
+            return true;
+        }
+        return false;
+    }
 })();
 ]]></script>
         <servicenow>false</servicenow>
@@ -50,14 +125,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-05 13:45:51</sys_created_on>
         <sys_id>bef2e323c38b221010cc9702b4013153</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Event Dashboard widget</sys_name>
         <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
         <sys_policy/>
         <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
         <sys_update_name>sp_widget_bef2e323c38b221010cc9702b4013153</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-05 13:56:59</sys_updated_on>
+        <sys_updated_on>2025-08-05 15:32:33</sys_updated_on>
         <template><![CDATA[<div class="table-responsive" style="width:100%;">
   <table class="table table-striped table-bordered table-hover table-condensed" style="width:100%;">
     <thead>
@@ -67,6 +142,7 @@
         <th>Date</th>
         <th>Location</th>
         <th>Summary</th>
+        <th>Actions</th> <!-- New column for buttons -->
       </tr>
     </thead>
     <tbody>
@@ -76,6 +152,10 @@
         <td>{{event.event_date}}</td>
         <td>{{event.x_location}}</td>
         <td>{{event.summary}}</td>
+        <td>
+          <button class="btn btn-danger btn-xs" ng-click="c.deleteEvent(event.number)">Delete</button>
+          <button class="btn btn-primary btn-xs" ng-click="c.openRescheduleModal(event)">Reschedule</button>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -6,23 +6,23 @@
         <bootstrap_alt>false</bootstrap_alt>
         <class_name/>
         <container_class_name/>
-        <name>EMP Homepage - Container 3</name>
-        <order>3</order>
+        <name>Event Planner Management - Container 1</name>
+        <order>1</order>
         <semantic_tag/>
-        <sp_page display_value="emp_homepage">e7fb57e7c34b221010cc9702b4013174</sp_page>
+        <sp_page display_value="event_planner_management">f686336bc3cb221010cc9702b40131a1</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-08-05 13:07:21</sys_created_on>
-        <sys_id>411e1b6bc34b221010cc9702b4013191</sys_id>
+        <sys_created_on>2025-08-05 17:27:05</sys_created_on>
+        <sys_id>e58958b3c38f221010cc9702b401313f</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name>EMP Homepage - Container 3</sys_name>
+        <sys_name>Event Planner Management - Container 1</sys_name>
         <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
         <sys_policy/>
         <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
-        <sys_update_name>sp_container_411e1b6bc34b221010cc9702b4013191</sys_update_name>
+        <sys_update_name>sp_container_e58958b3c38f221010cc9702b401313f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-05 15:57:02</sys_updated_on>
+        <sys_updated_on>2025-08-05 17:27:26</sys_updated_on>
         <title/>
         <width>container</width>
     </sp_container>
