@@ -16,7 +16,7 @@
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>notify_event_manager</internal_name>
-        <label_cache>[{"name":"Updated_1.current.assigned_to.email","label":"Trigger - Record Updated➛Budget Record➛Assigned to➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"c01398b4-8ffb-417c-bea8-f6317594ae96":["ah_to"]}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Budget Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1790002_event_ma_budget","column_name":"sys_id","usedInstances":{"c01398b4-8ffb-417c-bea8-f6317594ae96":[null]}}]</label_cache>
+        <label_cache>[{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Budget Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_1790002_event_ma_budget","column_name":"sys_id","usedInstances":{"c01398b4-8ffb-417c-bea8-f6317594ae96":[null]}},{"name":"Updated_1.current.assigned_to.email","label":"Trigger - Record Updated➛Budget Record➛Assigned to➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"c01398b4-8ffb-417c-bea8-f6317594ae96":["ah_to"]}}]</label_cache>
         <latest_snapshot/>
         <master_snapshot/>
         <name>Notify Event Manager</name>
@@ -37,7 +37,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7cbbaeabc347221010cc9702b40131f9</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Notify Event Manager</sys_name>
         <sys_overrides/>
         <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
@@ -45,7 +45,7 @@
         <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
         <sys_update_name>sys_hub_flow_7cbbaeabc347221010cc9702b40131f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-05 09:42:27</sys_updated_on>
+        <sys_updated_on>2025-08-06 04:37:03</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=7cbbaeabc347221010cc9702b40131f9"/>
@@ -60,10 +60,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-05 09:33:37</sys_created_on>
         <sys_id>422da26fc347221010cc9702b40131d9</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-05 09:42:27</sys_updated_on>
+        <sys_updated_on>2025-08-06 04:37:03</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -408,10 +408,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-05 09:40:38</sys_created_on>
         <sys_id>09cea2efc347221010cc9702b401310d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-05 09:42:27</sys_updated_on>
+        <sys_updated_on>2025-08-06 04:37:03</sys_updated_on>
         <ui_id>fe821b5f-392c-43de-9ff7-0fb96c6bbc14</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=09cea2efc347221010cc9702b401310d"/>

@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
     <sp_page action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <css/>
+        <css>body {
+  background-image: url('https://img.freepik.com/premium-vector/white-background-with-white-background-with-words-word-it_784842-7653.jpg'); /* Replace with actual image URL */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;   /* Makes image cover entire viewport */
+  background-attachment: fixed; /* Optional: keeps background fixed on scroll */
+  background-color: #000; /* Fallback color */
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+</css>
         <draft>false</draft>
         <dynamic_title_structure/>
         <human_readable_url_structure/>
@@ -16,14 +28,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-08-05 13:04:35</sys_created_on>
         <sys_id>b06ddf2bc34b221010cc9702b4013119</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>event</sys_name>
         <sys_package display_value="Event Management And Planning" source="x_1790002_event_ma">f44db09bc303221010cc9702b4013155</sys_package>
         <sys_policy/>
         <sys_scope display_value="Event Management And Planning">f44db09bc303221010cc9702b4013155</sys_scope>
         <sys_update_name>sp_page_b06ddf2bc34b221010cc9702b4013119</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-05 13:04:35</sys_updated_on>
+        <sys_updated_on>2025-08-06 06:14:04</sys_updated_on>
         <title>Event Details</title>
         <use_seo_script>false</use_seo_script>
     </sp_page>
